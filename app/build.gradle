@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.delong.iweixun"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //个推相关参数
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "W4RCIGF2qj5cGHPRu8ped3",
+                GETUI_APP_KEY   : "OdOL7s3lyF7DuUrYKV2vt4",
+                GETUI_APP_SECRET: "ofZFXitAlh9IqM8NmRou59",
+                PACKAGE_NAME    : applicationId
+        ]
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
+    implementation "com.android.support:design:$rootProject.ext.supportVersion"
+    implementation "net.qiujuer.genius:ui:$rootProject.ext.geniusVersion"
+    implementation "net.qiujuer.genius:res:$rootProject.ext.geniusVersion"
+
+    implementation "de.hdodenhof:circleimageview:$rootProject.ext.circleimageviewVersion"
+
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+
+    implementation "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
+
+    implementation "pub.devrel:easypermissions:$rootProject.ext.easyPMVersion"
+
+    implementation "com.github.yalantis:ucrop:$rootProject.ext.ucropVersion"
+    implementation "net.qiujuer.genius:kit-handler:$rootProject.ext.geniusVersion"
+    implementation "com.getui:sdk:$rootProject.ext.getuiVersion"
+
+    implementation "net.qiujuer.widget:airpanel:$rootProject.ext.airpanelVersion"
+
+    implementation 'com.android.support:support-v4:28.0.0'
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    implementation project(':lang')
+    implementation project(':factory')
+    implementation project(':common')
+
+}

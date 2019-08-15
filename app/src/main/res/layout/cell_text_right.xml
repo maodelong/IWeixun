@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/len_4"
+    android:paddingBottom="@dimen/len_4"
+    android:paddingEnd="@dimen/len_16"
+    android:paddingStart="@dimen/len_56"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/test"
+        android:background="@color/trans"
+        android:layout_marginEnd="@dimen/len_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/len_8"
+        android:paddingBottom="@dimen/len_8"
+        android:paddingStart="@dimen/len_8"
+        android:paddingEnd="@dimen/len_28"
+        android:minHeight="@dimen/portraitSize"
+        android:layout_gravity="end"
+        >
+        <TextView
+            android:gravity="center_vertical"
+            android:background="@drawable/right"
+            android:text="@string/app_name"
+            android:paddingTop="@dimen/len_8"
+            android:paddingBottom="@dimen/len_8"
+            android:paddingStart="@dimen/len_8"
+            android:paddingEnd="@dimen/len_8"
+            android:id="@+id/tex_content"
+            android:minHeight="@dimen/len_24"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/textPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/len_40"
+            />
+
+    </FrameLayout>
+
+    <com.delong.common.widget.PortraitView
+        android:padding="1px"
+        android:id="@+id/im_portrait"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="@dimen/len_2"
+        android:layout_gravity="end"
+        android:src="@drawable/default_portrait"
+        android:layout_width="@dimen/portraitSize"
+        android:layout_height="@dimen/portraitSize" />
+
+    <net.qiujuer.genius.ui.widget.Loading
+        android:layout_gravity="end"
+        android:padding="1px"
+        android:id="@+id/loading"
+        app:gAutoRun="false"
+        android:background="@null"
+        app:gForegroundColor="@color/colorAccent"
+        app:gForegroundLineSize="1dp"
+        android:layout_width="@dimen/portraitSize"
+        android:layout_height="@dimen/portraitSize"
+        />
+</FrameLayout>

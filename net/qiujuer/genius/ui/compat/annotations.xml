@@ -1,0 +1,5 @@
+<root>
+    <item name='net.qiujuer.genius.ui.compat.UiCompat'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/len_4"
+    android:paddingBottom="@dimen/len_4"
+    android:paddingStart="@dimen/len_16"
+    android:paddingEnd="@dimen/len_56"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_marginStart="@dimen/len_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/len_8"
+        android:paddingEnd="@dimen/len_8"
+        android:paddingStart="@dimen/len_28"
+        android:minHeight="@dimen/portraitSize"
+        android:layout_gravity="start"
+        >
+    <FrameLayout
+        android:background="@drawable/left_conner"
+        android:paddingStart="@dimen/len_12"
+        android:paddingEnd="@dimen/len_12"
+        android:paddingBottom="@dimen/len_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        >
+        <ImageView
+            android:layout_width="@dimen/len_128"
+            android:layout_height="@dimen/len_76"
+            android:maxHeight="@dimen/len_128"
+            android:id="@+id/im_img"
+            android:maxWidth="@dimen/len_128"
+            android:background="@color/trans"
+            android:layout_gravity="center_vertical"
+            android:minWidth="@dimen/len_48"
+            android:scaleType="centerCrop"
+            />
+
+    </FrameLayout>
+    </FrameLayout>
+
+    <com.delong.common.widget.PortraitView
+        android:padding="1px"
+        android:id="@+id/im_portrait"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="@dimen/len_2"
+        android:layout_gravity="start"
+        android:src="@drawable/default_portrait"
+        android:layout_width="@dimen/portraitSize"
+        android:layout_height="@dimen/portraitSize" />
+
+</FrameLayout>

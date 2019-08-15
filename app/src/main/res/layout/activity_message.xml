@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MessageActivity">
+    <ImageView
+        android:scaleType="centerInside"
+        android:foreground="@color/black_alpha_16"
+        android:contentDescription="@string/app_name"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/bg_src_woman"
+        />
+
+    <FrameLayout
+        android:id="@+id/fl_chat_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</FrameLayout>
