@@ -126,7 +126,7 @@ public class ActiveFragment extends PresenterFragment<SessionContract.Presenter>
 
         @Override
         protected void onBind(Session session) {
-            Log.e("delong","头像》》》》"+session.getPicture());
+            Log.e("delong","头像>>>>>>>>>>"+session.getPicture());
             Glide.with(getContext()).load(session.getPicture()).centerCrop().into(mPortraitView);
             tvName.setText(session.getTitle());
             tvTime.setText(DateTimeUtils.getSampleDate(session.getModifyAt()));
